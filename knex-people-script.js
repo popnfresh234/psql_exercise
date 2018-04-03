@@ -18,7 +18,8 @@ let input = process.argv.slice(2)[0];
 function logResults(rows){
   rows.forEach((record, index) => {
     let indexOffset = index + 1;
-    let humanString = indexOffset + ": " + record.first_name + " " + record.last_name + ", born " + "'" + record.birthdate + "'";
+    let formattedDate = record.birthdate.toISOString().slice(0,10);
+    let humanString = indexOffset + ": " + record.first_name + " " + record.last_name + ", born " + "'" + formattedDate + "'";
     console.log(humanString);
   });
 }
