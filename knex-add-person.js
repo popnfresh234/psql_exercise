@@ -34,13 +34,3 @@ function insertOne(first_name, last_name, dob){
 }
 
 insertOne(firstName, lastName, dob);
-
-// knex.().from('famous_people')
-//   .asCallback((err, rows)=> {
-//     if ( err ){
-//       console.log("Query error", err);
-//     } else {
-//       console.log("Insert success");
-//       knex.destroy();
-//     }
-//   });
